@@ -76,7 +76,7 @@ def dashboard():
 def teacher():
     conn=get_connection()
     cursor=conn.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM TEACHERS")
+    cursor.execute("SELECT * FROM teachers")
     teachers= cursor.fetchall()
     conn.close()
     return render_template("teachers.html",teachers=teachers)
@@ -87,7 +87,7 @@ def add_teacher():
         name=request.form["name"]
         experience=request.form["experience"]
 
-        query="  INSERT INTO TEACHERS(NAME,EXPERIENCE) VALUES (%s,%s)"
+        query="  INSERT INTO teachers(name,experience) VALUES (%s,%s)"
         conn = get_connection()
         cursor=conn.cursor()
         cursor.execute(query,(name,experience))
@@ -117,7 +117,7 @@ def add_courses():
         course_name=request.form["name"]
         teacher_id=request.form["teacher_id"]
         teacher_id=teacher_id if teacher_id else None
-        cursor.execute("INSERT INTO COURSES(course_name,teacher_id) VALUES (%s,%s)", (course_name,teacher_id))
+        cursor.execute("INSERT INTO courses(course_name,teacher_id) VALUES (%s,%s)", (course_name,teacher_id))
         conn.commit()
         conn.close()
         return redirect('/courses')
