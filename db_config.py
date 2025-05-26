@@ -9,11 +9,11 @@ load_dotenv()
 def get_connection():
     try:
         conn = mysql.connector.connect(
-            host=os.environ['DB_HOST'],
-            user=os.environ['DB_USER'],
-            password=os.environ['DB_PASSWORD'],
-            database=os.environ['DB_NAME'],
-            port=int(os.environ['DB_PORT'])
+            host=os.environ['interchange.proxy.rlwy.net'],
+            user=os.environ['root'],
+            password=os.environ['gmeNsOMoMQBzlbDnRiRYUoKHxfmXKncw'],
+            database=os.environ['railway'],
+            port=int(os.environ['24732'])
         )
         if conn.is_connected():
             print("Connected to MySQL database")
