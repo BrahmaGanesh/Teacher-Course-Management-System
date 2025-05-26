@@ -111,7 +111,7 @@ def courses():
 def add_courses():
     conn=get_connection()
     cursor=conn.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM TEACHERS")
+    cursor.execute("SELECT * FROM teachers")
     teachers=cursor.fetchall()
     if request.method == "POST":
         course_name=request.form["name"]
