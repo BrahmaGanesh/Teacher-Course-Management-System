@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+     <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <header>
+        <h2>Teacher-Course Management System </h2>
+        <ul>
+            <li><a href="{{url_for('dashboard')}}">Home</a></li>
+            <li><a href="{{url_for('teacher')}}">Teachers</a></li>
+            <li><a href="{{url_for('courses')}}">Courses</a></li>
+            <li><a href="{{url_for('logout')}}">Logout</a></li>
+        </ul>
+    </header>
+    <section>
+       <div class="main tt">
+          <h1>Teacher-Course Dashboard</h1>
+    <div class="detials">
+        <p><strong>Total Teachers:</strong> {{ teachers }}</p>
+        <p><strong>Total Courses:</strong> {{ courses }}</p>
+        <p><strong>Unassigned Courses:</strong> {{ unassigned }}</p>
+        <p><strong>Average Experience:</strong> {{ avg_exp }} years</p>
+    </div>
+       </div>
+    </section>
+</body>
+</html>

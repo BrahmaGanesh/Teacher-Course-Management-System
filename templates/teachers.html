@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+  <title>Document</title>
+</head>
+<body>
+   <header>
+        <h2>Teacher-Course Management System </h2>
+        <ul>
+           <li><a href="{{url_for('dashboard')}}">Home</a></li>
+            <li><a href="{{url_for('teacher')}}">Teachers</a></li>
+            <li><a href="{{url_for('courses')}}">Courses</a></li>
+        </ul>
+    </header>
+  <section>
+    <div class="main">
+      <h1>Teachers List</h1>
+      <div class="table-content">
+        <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>Experience</th>
+        <th>Action_type</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for teacher in teachers %}
+      <tr>
+        <td>{{teacher.id}}</td>
+        <td>{{teacher.name}}</td>
+        <td>{{teacher.experience}}</td>
+        <td><a href="/edit_teacher/{{teacher.id}}">Edit</a> | <a href="/delate_teacher/{{teacher.id}}" onclick="return confirm('are u sure to delate')">Delate</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

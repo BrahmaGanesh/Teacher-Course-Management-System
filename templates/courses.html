@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+  <title>Document</title>
+</head>
+<body>
+   <header>
+        <h2>Teacher-Course Management System </h2>
+        <ul>
+          <li><a href="{{url_for('dashboard')}}">Home</a></li>
+            <li><a href="{{url_for('teacher')}}">Teachers</a></li>
+            <li><a href="{{url_for('courses')}}">Courses</a></li>
+        </ul>
+    </header>
+  <section>
+   <div class="main">
+     <h1>All Courses Register</h1>
+    <div class="table-content">
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Course Id</th>
+            <th>Course Name</th>
+            <th>Teacher Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for course in courses %}
+          <tr>
+            <td>{{course.course_id}}</td>
+            <td>{{course.course_name}}</td>
+            <td>{{course.name}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+   </div>
+  </section>
+</body>
+</html>

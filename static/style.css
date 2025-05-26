@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(13, 31, 31);
+  color: rgb(255, 255, 255);
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.tt{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.detials{
+  padding: 10px;
+  margin: 20px 0;
+  font-size: 20px;
+}
+.login form{
+  background-color: rgb(47, 66, 66);
+  padding: 10px;
+  border-radius: 10px;
+}
+.login form label{
+  font-size: 20px;
+}
+.login form input{
+  width: 100%;
+  height: 30px;
+  padding: 10px 15px;
+  font-size: 15px;
+  margin-bottom: 10px ;
+}
+.login form input:focus{
+  outline: none;
+  background-color: antiquewhite;
+}
+.login form button{
+  background-color: rgb(16, 90, 90);
+  box-shadow: 4px 4px 7px ghostwhite;
+  color: white;
+  font-size: 20px;
+  padding: 10px 15px;
+  text-align: center;
+}
+header{
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(54, 74, 74);
+}
+header li{
+  display: inline;
+  margin-right: 10px;
+}
+header li a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+section{
+  width: 90%;
+  margin: auto;
+}
+.main{
+  /* background-color: bisque; */
+  padding: 10px;
+  text-align: left;
+}
+/* .main h1{
+  text-align: center;
+} */
+.main a{
+  background-color: rgb(72, 230, 178);
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  margin: 3px;
+}
+.table-content{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.table-content table{
+  width: 70%;
+  text-align: center;
+}
+.table-content table td,th{
+   padding: 10px 15px;
+}
+.table-content table tbody tr:nth-child(odd){
+  background-color: rgb(44, 73, 73);
+}
