@@ -21,7 +21,7 @@ def login():
            return redirect("/dashboard")
        else:
            flash("Invalid user","danger")
-           redirect("/")
+           return redirect("/")
    return render_template("login.html")
 
 
